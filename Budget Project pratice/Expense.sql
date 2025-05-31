@@ -53,4 +53,15 @@ FROM expenses
 WHERE amount > 2000
 ORDER BY amount DESC
 LIMIT 1,1,1;
-select id,product
+
+select id,product,description,amount,date
+FROM expenses
+WHERE amount >= 2000
+ORDER BY amount DESC
+LIMIT 2;
+
+
+-- adding data--
+INSERT INTO expenses (product,description,amount,date)
+VALUES ('food',"order that food",'5000','2020-02-01');
+ 
